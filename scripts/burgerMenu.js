@@ -1,10 +1,14 @@
-const mobileNav = document.querySelector(".nav");
-const headerButton = document.querySelector(".header-btn");
+const burgerNav = document.querySelector(".burger__nav");
+
+function getViewportHeight (){
+  let intViewportHeight = window.innerHeight;
+  return intViewportHeight;
+}
 
 document.querySelector(".burger-menu").addEventListener("click", () => {
-  mobileNav.style.right = 0;
+  burgerNav.style.right = 0;
 });
 
 document.querySelector(".burger-menu__exit").addEventListener("click", () => {
-  mobileNav.style.right = -100 + "%";
+  burgerNav.style.right = -100 + "%";
 });

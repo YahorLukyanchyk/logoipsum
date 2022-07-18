@@ -104,7 +104,11 @@ nav,
 section {
   display: block;
 }
+html,
 body {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
   line-height: 1;
 }
 ol,
@@ -140,6 +144,17 @@ a {
 body {
   font-family: "Libre Franklin", sans-serif;
   overflow: hidden;
+}
+
+.wrapper{
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.main{
+  flex: 1 1 auto;
 }
 
 [class$="__container"] {
@@ -220,13 +235,45 @@ body {
 }
 
 .burger-menu {
-    display: none;
+  display: none;
   margin-left: 10px;
   cursor: pointer;
 }
 
+.burger__nav {
+  display: none;
+  width: 375px;
+  position: absolute;
+  top: 0;
+  right: -100%;
+  background-color: #5454D4;
+  z-index: 9999;
+  transition: 1s;
+  padding: 40px 0;
+}
+.burger__nav__list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.burger__nav__item {
+  padding: 20px 0;
+}
+.burger__nav__link {
+  color: #ff7143;
+}
+
 .burger-menu__exit {
   display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 11px;
+  right: 18px;
+  font-size: 40px;
+  color: #ff7143;
 }
 
 .line {
@@ -268,67 +315,33 @@ body {
     max-width: none;
   }
 
-  .burger-menu{
+  .burger-menu {
     display: block;
-  }
-
-  .header__nav{
-    overflow: hidden;
-  }
-  .nav {
-    position: absolute;
-    top: 0;
-    left: 100%;
-    right: -100%;
-    z-index: 999;
-    min-width: 320px;
-    height: 100%;
-    padding-top: 30px;
-    background-color: #5454D4;
-    color: #ff7143;
-    transition: 1s;
-  }
-
-  .nav__list {
-    overflow: hidden;
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .nav__list a{
-    color: #ff7143;
-  }
-
-  .nav__list a:hover{
-    border-bottom: 2px solid #ff7143;
-  }
-
-  .nav__list > li:not(.nav__item:last-child) {
-    margin-right: 0;
-  }
-
-  .nav__item:last-child {
-    margin-right: 0;
-  }
-
-  .header-btn {
-    margin-left: auto;
   }
 
   .burger-menu__exit {
     display: block;
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    right: 18px;
-    font-size: 40px;
+  }
+
+  .burger__nav {
+    display: block;
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .header-btn {
+    margin-left: auto;
   }
 }
 
 @media (max-width: 512.98px) {
   .header-btn {
     display: none;
+  }
+
+  .burger__nav {
+    width: 100%;
   }
 }
