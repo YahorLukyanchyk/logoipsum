@@ -6,9 +6,9 @@ function getViewportHeight (){
 }
 
 document.querySelector(".burger-menu").addEventListener("click", () => {
-  burgerNav.style.right = 0;
+  burgerNav.style.top = 0;
 });
 
 document.querySelector(".burger-menu__exit").addEventListener("click", () => {
-  burgerNav.style.right = -100 + "%";
+  burgerNav.style.top = -100 + "%";
 });

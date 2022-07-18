@@ -106,8 +106,6 @@ section {
 }
 html,
 body {
-  overflow: hidden;
-  position: relative;
   height: 100%;
   line-height: 1;
 }
@@ -154,7 +152,6 @@ a {
 
 body {
   font-family: "Libre Franklin", sans-serif;
-  overflow: hidden;
 }
 
 .wrapper {
@@ -266,7 +263,7 @@ body {
   width: 375px;
   position: absolute;
   top: 0;
-  right: -100%;
+  right: 0;
   background-color: #5454d4;
   z-index: 9999;
   transition: 1s;
