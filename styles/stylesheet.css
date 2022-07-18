@@ -266,6 +266,10 @@ body {
   color: #ff7143;
 }
 
+.burger__nav__link:hover{
+  border-bottom: 2px solid;
+}
+
 .burger-menu__exit {
   display: none;
   cursor: pointer;
