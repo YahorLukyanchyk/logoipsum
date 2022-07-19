@@ -261,9 +261,10 @@ body {
 .burger__nav {
   display: none;
   width: 375px;
+  height: 100%;
   position: absolute;
   top: 0;
-  right: 0;
+  left: -100%;
   background-color: #5454d4;
   z-index: 9999;
   transition: 1s;
@@ -463,5 +464,48 @@ body {
   .btn {
     font-size: 14px;
     width: 165px;
+  }
+}
+
+.section-two__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+.section-two__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EDEDED;
+  width: 200px;
+  height: 80px;
+  border-radius: 20px;
+}
+
+.section-two__item img{
+  max-width: 100%;
+}
+
+@media (max-width: 1309px){
+  .section-two__item:last-child{
+    display: none;
+  }
+}
+
+@media (max-width: 1030px){
+  .section-two__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+}
+
+@media (max-width: 512.98px) {
+  .section-two__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center
   }
 }
